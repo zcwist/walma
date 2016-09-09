@@ -15,7 +15,7 @@ exports.open = open = (config, cb=->) ->
       console.log "Could not open the database", err.trace
       process.exit 1
 
-    db.collection "drawings", (err, collection) ->
+    db.collection "drawings", (err, collection) -> #insert a document named "drawings" by zac
       throw err if err
       Drawing.collection = collection
       Drawing.db = db
